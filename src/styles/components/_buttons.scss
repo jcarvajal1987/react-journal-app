@@ -32,10 +32,13 @@
 .btn-danger {
     background-color: red;
     transition: background-color .3s ease;
+    bottom: 0;
+    position: sticky;
     &:hover {
         background-color: darken($color: red, $amount: 10);
     }
 }
+
 
 .btn-block {
     width: 100%;

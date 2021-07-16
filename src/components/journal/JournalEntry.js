@@ -2,7 +2,6 @@ import React from 'react'
 import moment from 'moment'
 import { useDispatch } from 'react-redux';
 import { activeNote } from '../../actions/notes';
-import { CSSTransition } from 'react-transition-group';
 
 
 export const JournalEntry = ({ id, date, title, body, url }) => {

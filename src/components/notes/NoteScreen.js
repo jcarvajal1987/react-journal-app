@@ -35,11 +35,11 @@ export const NoteScreen = () => {
     const handleDelete = () => {
         dispatch(startDeleting( id  ));
     }
-
+    
     return (
         <>
                       
-        <div className="notes__main-content">
+        <div className="notes__main-content relative">
             <NotesAppBar/>
 
         <TransitionGroup className="grilla-login">
@@ -69,7 +69,6 @@ export const NoteScreen = () => {
 
                 <textarea className="notes__textarea"
                     placeholder="What happened today"
-                    className="notes__textarea"
                     value={body} 
                     name="body"
                     onChange={handleInputChange}

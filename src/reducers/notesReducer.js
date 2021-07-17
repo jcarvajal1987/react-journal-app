@@ -3,7 +3,7 @@ import { types } from "../types/types";
 
 const initialstate = {
     notes: [],
-    active: null
+    active: {id: "noActive", date: 1, title: "", body: "", url: ""}
 }
 
 export const notesReducer = ( state = initialstate, action ) => {
@@ -43,13 +43,13 @@ export const notesReducer = ( state = initialstate, action ) => {
         case types.notesDelete:
             return {
                 ...state,
-                active: null,
+                active: {id: "noActive", date: 1, title: "", body: "", url: ""},
                 notes: state.notes.filter( note => note.id !== action.payload )
             }
         case types.notesLogoutCleaning:
             return {
                 ...state,
-                active: null,
+                active: {id: "noActive", date: 1, title: "", body: "", url: ""},
                 notes: []
             }
     
